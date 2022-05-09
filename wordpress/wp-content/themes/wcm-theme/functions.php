@@ -1,13 +1,13 @@
 <?php
+ //Add theme support
 function setup_wcm_theme(){
-    //Add theme support
     add_theme_support('post-thumbnails');
     add_theme_support('automatic-feed-links');
     add_theme_support('custom-logo');
     add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
     add_theme_support('title-tag');
 }
-
+// Hooking up the function to theme setup
 add_action('after_setup_theme', 'setup_wcm_theme');
 
 function create_custom_posttypes() {
@@ -84,6 +84,76 @@ function create_custom_posttypes() {
         )
     );  
 }
-// Hooking up our function to theme setup
+// Hooking up the function to theme setup
 add_action( 'init', 'create_custom_posttypes');
+
+function register_custom_taxonomy(){
+    $labels = array(
+        'name'              => _x('Ages','Ages'),
+        'singular_name'     => _x('Age', 'Age'),
+    );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+    );
+    register_taxonomy('travel_age', ['wcm_travel', 'travel_camp', 'travel_cup', 'page'], $args);
+
+    $labels = array(
+        'name'              => _x('Countries','Countries'),
+        'singular_name'     => _x('Country', 'Country'),
+    );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+    );
+    register_taxonomy('travel_country', ['wcm_travel', 'travel_camp', 'travel_cup', 'travel_soccer', 'page'], $args);
+
+    $labels = array(
+        'name'              => _x('Sport Leagues','Sport Leagues'),
+        'singular_name'     => _x('Sport League', 'Sport League'),
+    );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+    );
+    register_taxonomy('travel_sport_league', ['wcm_travel', 'travel_soccer','travel_matches', 'page'], $args);
+
+    $labels = array(
+        'name'              => _x('Sport Types','Sport Types'),
+        'singular_name'     => _x('Sport Type', 'Sport Type'),
+    );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+    );
+    register_taxonomy('travel_sport_type', ['wcm_travel', 'travel_camp', 'travel_cup', 'travel_soccer', 'page'], $args);
+
+    $labels = array(
+        'name'              => _x('Travel Types','Travel Types'),
+        'singular_name'     => _x('Travel Types', 'Travel Types'),
+    );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+    );
+    register_taxonomy('travel_type', ['wcm_travel', 'travel_camp', 'travel_cup', 'travel_matches', 'page'], $args);
+
+}
+// Hooking up the function to theme setup
+add_action( 'init', 'register_custom_taxonomy');
 ?>
