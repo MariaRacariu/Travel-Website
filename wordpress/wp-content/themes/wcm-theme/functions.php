@@ -156,4 +156,9 @@ function register_custom_taxonomy(){
 }
 // Hooking up the function to theme setup
 add_action( 'init', 'register_custom_taxonomy');
+
+function add_theme_scripts(){
+    wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/main.css');
+}
+add_action('wp_enqueue_scripts','add_theme_scripts');
 ?>
