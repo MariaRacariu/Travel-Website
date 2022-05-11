@@ -169,10 +169,13 @@ add_action('wp_enqueue_scripts','add_theme_scripts');
 //Navigation
 function menus(){
     $location = array(
-        'primary' => 'Desktop Primary Navigation'
+        'primary' => 'Desktop Primary Navigation',
+        'footer_menu_one' => 'Footer menu one',
+        'footer_menu_two' => 'Footer menu two',
+        'footer_menu_three' => 'Footer menu three',
     );
 
-    register_nav_menus($location);
+    register_nav_menus($location, '/dist/main.css');
 }
 //Hooking up the function to init
 add_action('init', 'menus');
