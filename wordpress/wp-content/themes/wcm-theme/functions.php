@@ -10,6 +10,7 @@ function setup_wcm_theme(){
 // Hooking up the function to theme setup
 add_action('after_setup_theme', 'setup_wcm_theme');
 
+//Creating custom post types
 function create_custom_posttypes() {
     // Custom Post Types Options
     register_post_type( 'wcm_travel',
@@ -84,9 +85,10 @@ function create_custom_posttypes() {
         )
     );  
 }
-// Hooking up the function to theme setup
+// Hooking up the function to init
 add_action( 'init', 'create_custom_posttypes');
 
+//Creating custom taxonomy 
 function register_custom_taxonomy(){
     $labels = array(
         'name'              => _x('Ages','Ages'),
@@ -154,11 +156,12 @@ function register_custom_taxonomy(){
     register_taxonomy('travel_type', ['wcm_travel', 'travel_camp', 'travel_cup', 'travel_matches', 'page'], $args);
 
 }
-// Hooking up the function to theme setup
+// Hooking up the function to init
 add_action( 'init', 'register_custom_taxonomy');
 
+//Linking main.css
 function add_theme_scripts(){
     wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/main.css');
 }
+// Hooking up the function to scripts startup
 add_action('wp_enqueue_scripts','add_theme_scripts');
-?>
