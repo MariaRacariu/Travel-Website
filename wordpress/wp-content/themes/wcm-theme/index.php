@@ -37,6 +37,24 @@
         </div>
       </div>
     </div>
+
+    <?php
+    // if (have_posts()) {
+    //   while (have_posts()) {
+    ?>
+        <!-- <div class="col">
+          <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+              <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><?php the_title() ?></h2>
+            </div>
+          </div>
+        </div> -->
+     <?php
+      //}
+      // This else posts a message if there are no posts available
+    // } else {
+      ?><!--<p><?php esc_html_e('Sorry, no posts matched your criteria.'); ?></p> --><?php
+    //                                                                               } ?>
   </div>
 </div>
 <div class="container">
