@@ -173,6 +173,9 @@ function menus(){
         'footer_menu_one' => 'Footer menu one',
         'footer_menu_two' => 'Footer menu two',
         'footer_menu_three' => 'Footer menu three',
+        'cards_menu_one' => 'Cards menu one',
+        'cards_menu_two' => 'Cards menu two',
+        'cards_menu_three' => 'Cards menu three',
     );
 
     register_nav_menus($location, '/dist/main.css');
