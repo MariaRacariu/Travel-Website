@@ -5,7 +5,7 @@
   <div class="col-md-5 p-lg-5 mx-auto my-5">
     <h1 class="display-4 fw-normal">Här börjar din använtyr</h1>
     <p class="lead fw-normal">Resa över hela världen</p>
-    <a class="btn btn-outline-secondary" href="#">Sök</a>
+    <a class="btn btn-outline-success" href="#">Sök</a>
   </div>
 </div>
 <!-- Custom Cards -->
@@ -13,7 +13,7 @@
   <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
     <!-- Card 1 -->
     <div class="col">
-      <div class="card card-cover h-100 overflow-hidden text-black bg-light rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+      <div class="card card-cover h-100 overflow-hidden text-white bg-light rounded-5 shadow-lg" style="background-image: url(http://localhost/Travel-Website/wordpress/wp-content/uploads/2022/05/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg)">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-black text-shadow-1">
           <ul class="nav flex-column">
             <?php
@@ -32,7 +32,7 @@
     </div>
     <!-- Card 2 -->
     <div class="col">
-      <div class="card card-cover h-100 overflow-hidden text-black bg-light rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+      <div class="card card-cover h-100 overflow-hidden text-white bg-light rounded-5 shadow-lg" style="background-image: url('http://localhost/Travel-Website/wordpress/wp-content/uploads/2022/05/fauzan-saari-cjYQBSKDSII-unsplash.jpg');">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-black text-shadow-1">
           <ul class="nav flex-column">
             <?php
@@ -51,7 +51,7 @@
     </div>
     <!-- Card 3 -->
     <div class="col">
-      <div class="card card-cover h-100 overflow-hidden text-black bg-light rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+      <div class="card card-cover h-100 overflow-hidden text-black bg-light rounded-5 shadow-lg" style="background-image: url('http://localhost/Travel-Website/wordpress/wp-content/uploads/2022/05/travel-nomades-JO19K0HDDXI-unsplash.jpg');">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-black text-shadow-1">
           <ul class="nav flex-column">
             <?php
@@ -77,13 +77,13 @@
 </div>
 <!-- Cards -->
 <div class="container pb-4">
-<h1>Check out trips</h1>
+<h1>Kolla in våra resor</h1>
   <div class="row">
     <?php get_template_part('template-parts/index', 'travelCard'); ?>
   </div>
 </div>
 <div class="container pb-4">
-<h1>Check out trips</h1>
+<h1>Kolla in våra resor</h1>
   <div class="row">
     <?php get_template_part('template-parts/index', 'campCard'); ?>
   </div>

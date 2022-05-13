@@ -13,7 +13,7 @@ $args = array(
         
         <div class="col-sm">
             <div class="card text-center" style="width: 18rem;">
-                <img class="card-img-top" src="http://localhost/Travel-Website/wordpress/wp-content/uploads/2022/05/sample-image.png" alt="Card image cap">
+                <img class="card-img-top" src="<?php get_the_post_thumbnail_url() ?>"> <!-- Doesn't work -->
                 <div class="card-body">
                     <h5 class="card-title"><?php the_title() ?></h5>
                     <p class="card-text"><?php the_excerpt();?></p>

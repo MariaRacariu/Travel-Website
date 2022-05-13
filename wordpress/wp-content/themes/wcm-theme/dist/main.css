@@ -11289,3 +11289,7 @@ a {
 a:hover {
   color: rgb(40, 167, 69);
 }
+
+.card-cover {
+  background-position: center;
+}
