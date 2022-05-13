@@ -1,6 +1,6 @@
 <?php get_header() ?>
 <div class="container">
-  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+  <div class="p-4 p-md-5 mb-4 text-black rounded bg-light">
     <div class="col-md-6 px-0">
       <h1 class="display-4"><?php the_title(); ?></h1>
       <p class="lead my-3"><?php the_taxonomies(); ?></p>
@@ -13,7 +13,7 @@
   <h1>Trip Details</h1>
   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, error similique. Debitis dicta ea asperiores perspiciatis voluptates cupiditate quos distinctio accusantium iste! Non deleniti inventore tempora voluptas labore enim voluptatibus?</p>
   <div class="container">
-    <div class="row">
+    <div class="row d-flex justify-content-center">
       <div class="col-lg-4">
         <div class="d-inline"><img src="" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140"></div>
         <div class="d-inline">
@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row d-flex justify-content-center">
       <div class="col-lg-4">
         <div class="d-inline"><img src="" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140"></div>
         <div class="d-inline">
@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row d-flex justify-content-center">
       <div class="col-lg-4">
         <div class="d-inline"><img src="" alt="" class="bd-placeholder-img rounded-circle" width="140" height="140"></div>
         <div class="d-inline">
@@ -161,7 +161,9 @@
         <?php get_template_part('template-parts/template', 'travel'); ?>
         </div>
       </div> 
-      <button type="button" class="btn btn-primary">View More</button>
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary">View More</button>
+      </div>
     </div>
   </div>
 </div>

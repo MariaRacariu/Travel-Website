@@ -22,6 +22,14 @@ function create_custom_posttypes() {
             'public' => true,
             'has_archive' => true,
             'show_in_rest' => true,
+            'hierarchical' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail',
+                'custom-fields'
+            )
+            
         )
     );
     // Custom Post Types Options
@@ -162,6 +170,7 @@ add_action( 'init', 'register_custom_taxonomy');
 //Linking main.css
 function add_theme_scripts(){
     wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/main.css', array(),'1.0','all');
+    wp_enqueue_script('name', get_template_directory_uri() . '/dist/main.js', array(), null,true);
 }
 // Hooking up the function to scripts startup
 add_action('wp_enqueue_scripts','add_theme_scripts');
