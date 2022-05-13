@@ -1,14 +1,12 @@
 <?php get_header() ?>
 
 <!-- Hero -->
-<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="background-image: url(http://localhost/Travel-Website/wordpress/wp-content/uploads/2022/05/holly-mandarich-UVyOfX3v0Ls-unsplash.jpg);">
   <div class="col-md-5 p-lg-5 mx-auto my-5">
     <h1 class="display-4 fw-normal">Här börjar din använtyr</h1>
     <p class="lead fw-normal">Resa över hela världen</p>
     <a class="btn btn-outline-secondary" href="#">Sök</a>
   </div>
-  <div class="product-device shadow-sm d-none d-md-block"></div>
-  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
 </div>
 <!-- Custom Cards -->
 <div class="container px-4 py-5" id="custom-cards">
@@ -81,17 +79,13 @@
 <div class="container pb-4">
 <h1>Check out trips</h1>
   <div class="row">
-    <?php get_template_part('template-parts/template', 'travel'); ?>
-    <?php get_template_part('template-parts/template', 'travel'); ?>
-    <?php get_template_part('template-parts/template', 'travel'); ?>
+    <?php get_template_part('template-parts/index', 'travelCard'); ?>
   </div>
 </div>
 <div class="container pb-4">
 <h1>Check out trips</h1>
   <div class="row">
-    <?php get_template_part('template-parts/template', 'travel'); ?>
-    <?php get_template_part('template-parts/template', 'travel'); ?>
-    <?php get_template_part('template-parts/template', 'travel'); ?>
+    <?php get_template_part('template-parts/index', 'campCard'); ?>
   </div>
 </div>
 <!-- Hero -->

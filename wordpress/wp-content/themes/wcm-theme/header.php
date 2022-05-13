@@ -27,7 +27,7 @@
             )
         ?>
     <div class="col-md-3 text-end">
-      <button type="button" class="btn btn-primary">Log in</button>
+      <button type="button" class="btn btn-outline-success">Loga in</button>
     </div>
   </header>
 </div>
